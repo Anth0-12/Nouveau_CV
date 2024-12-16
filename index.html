@@ -21,10 +21,10 @@
         <nav>
             <p class="nom">Hecquet <span class="prenom">Anthony</span></p>
             <ul class="menu">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Projets personnels</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="propos.html">A propos</a></li>
+                <li><a href="projets.html">Projets personnels</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -32,10 +32,15 @@
     <main>
         <section class="presentation">
             <div class="presentation-content">
-                <h1>Salut &#128075;, moi c'est <span class="prenom_2">Anthony</span></h1>
+                <h1>Salut
+                    <div class="wobble-hor-bottom">&#128075;</div>! Moi c'est <span class="prenom_2">Anthony</span>
+                </h1>
                 <h2>Développeur web junior</h2>
-                <p class="presentation-text">J'ai 28 ans et je suis actuellement à la recherche d'une alternance de
-                    Développeur Web Fullstack.
+                <p class="presentation-text">J'ai 28 ans, titulaire d'un <span class="important">CQP webdesigner</span>
+                    et d'un <span class="important">titre professionnel développeur web et web mobile</span>, tous deux
+                    équivalent à <span class="important">bac+2</span>. Je suis actuellement à la recherche
+                    d'une <span class="important">alternance</span> pour devenir <span class="important">Développeur Web
+                        Fullstack</span>.
                 </p>
                 <ul>
                     <li><a href=""><i class="fa-brands fa-linkedin-in fa-sm"></i></a></li>
@@ -46,8 +51,77 @@
 
             <div class="image-profil">
             </div>
+        </section>
 
+        <section class="competences">
+            <div class="competences-content">
+                <h2>Mes competences</h2>
 
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <div class="card">
+                            <img src="img/antho2.jpg" alt="">
+                            <h3>Développement web et web mobile</h3>
+                            <div class="card-content">
+                                <p>HTML/CSS, Javascript, Bootstrap, SASS, Jquery, API REST</p>
+                                <p>Responsive design, UI/UX design, WordPress</p>
+                                <p>PHP, Symfony, SQL</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="card">
+                            <img src="img/antho2.jpg" alt="">
+                            <h3>Logiciels et autres</h3>
+                            <div class="card-content">
+                                <p>VS Code, Photoshop, Illustrator, Figma</p>
+                                <p>Xampp, Wamp64, PhpMyAdmin, Github</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projets">
+            <div class="projet-content">
+                <h2>Mes projets</h2>
+
+                <div class="grid-container-projet">
+                    <div class="grid-item">
+                        <a href="" class="card">
+                            <img src="img/antho2.jpg" alt="">
+                            <h3>Student Croûte</h3>
+                            <div class="card-content">
+                                <p>Projet de stage formation développeur web</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="" class="card">
+                            <img src="img/antho2.jpg" alt="">
+                            <h3>Appli films</h3>
+                            <div class="card-content">
+                                <p>Projet personnel</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="" class="card">
+                            <img src="img/antho2.jpg" alt="">
+                            <h3>API météo</h3>
+                            <div class="card-content">
+                                <p>Projet personnel</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="projets.html" class="voir-plus"> Voir plus</a>
+            </div>
         </section>
     </main>
 </body>
