@@ -151,9 +151,8 @@ main {
 
                 padding-bottom: 2rem;
             }
-            .important {
+            strong {
                 color: #15ff00;
-                font-weight: bold;
             }
             .presentation-content ul {
                 display: flex;
