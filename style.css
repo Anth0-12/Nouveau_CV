@@ -71,6 +71,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     height: auto;   
     width: 100vw;
@@ -95,7 +96,8 @@ main {
             justify-content: center;
             align-items: start;
 
-            height: auto;      
+            height: auto;
+            width: 50vw;   
         }
             .presentation-content h1 {
                 color: #ffffff;
@@ -103,8 +105,36 @@ main {
                 font-weight: bold;
 
                 text-align: start; 
+                display: flex;
+                gap: 2rem;
             }
-            .presentation-content span {
+            .wobble-hor-bottom:hover {
+	        animation: wobble-hor-bottom 0.8s both;
+            cursor: pointer;
+            }   
+            @keyframes wobble-hor-bottom {
+            0%,
+            100% {
+                        transform: translateX(0%);
+                        transform-origin: 50% 50%;
+            }
+            15% {
+                        transform: translateX(-30px) rotate(-6deg);
+            }
+            30% {
+                        transform: translateX(15px) rotate(6deg);
+            }
+            45% {
+                        transform: translateX(-15px) rotate(-3.6deg);
+            }
+            60% {
+                        transform: translateX(9px) rotate(2.4deg);
+            }
+            75% {
+                        transform: translateX(-6px) rotate(-1.2deg);
+            }
+            }
+            .prenom_2 {
                 color: #15ff00;
             }
             .presentation-content h2 {
@@ -120,6 +150,10 @@ main {
                 font-size: 2.2rem;
 
                 padding-bottom: 2rem;
+            }
+            .important {
+                color: #15ff00;
+                font-weight: bold;
             }
             .presentation-content ul {
                 display: flex;
@@ -164,3 +198,169 @@ main {
             background-repeat: no-repeat;
             background-position: center;
         }
+
+.competences {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 100vw;
+
+    padding: 10rem;
+}
+    .competences-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        height: auto;
+        width: 50vw;   
+
+        background-color: #252525;
+
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    .competences h2 {
+        color: #15ff00;
+        font-size: 4rem;
+        font-weight: bold;
+
+        padding-bottom: 2rem;
+    }
+
+        .grid-container {
+                display: grid;
+                column-gap: 3rem;
+                grid-template-columns: 23vw 23vw;
+            }
+            .grid-item {
+                background-color: rgba(49, 49, 49, 0.8);
+                font-size: 30px;
+                text-align: center;
+
+                border-radius: 5px;
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                height: auto;       
+                width: auto;  
+                
+                padding-top: 2rem;
+            }
+            .card img {      
+                width: 50%;    
+            }
+            .card h3 {
+                color: #fff;       
+                font-size: 2rem;
+                
+                padding: 1rem 4rem 2rem;
+            }
+            .card-content {
+                color: #fff;           
+                width: 100%;
+
+                padding: 0 2rem 2rem 2rem;
+            }   
+            .card-content p {
+                font-size: 1.5rem;
+                text-align: start;
+
+                padding: 0rem 1rem 0.5rem;
+            }
+
+.projets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 100vw;
+}
+    .projet-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        height: auto;
+        width: 75vw;   
+
+        background-color: #252525;
+
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    .projets h2 {
+        color: #15ff00;
+        font-size: 4rem;
+        font-weight: bold;
+
+        padding-bottom: 2rem;
+    }
+
+        .grid-container-projet {
+                display: grid;
+                column-gap: 3rem;
+                grid-template-columns: 23vw 23vw 23vw;
+            }
+            .grid-item {
+                background-color: rgba(49, 49, 49, 0.8);
+                font-size: 30px;
+                text-align: center;
+
+                border-radius: 5px;
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                height: auto;       
+                width: auto;  
+                
+                padding-top: 2rem;
+            }
+            .card img {      
+                width: 50%;    
+            }
+            .card h3 {
+                color: #fff;       
+                font-size: 2rem;
+                
+                padding: 1rem 4rem 2rem;
+            }
+            .card-content {
+                color: #fff;           
+                width: 100%;
+
+                padding: 0 2rem 2rem 2rem;
+            }   
+            .card-content p {
+                font-size: 1.5rem;
+                text-align: start;
+
+                padding: 0rem 1rem 0.5rem;
+            }
+            .voir-plus {
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+
+                color: #fff;
+                font-size: 2rem;
+
+                margin-top: 2rem; 
+            }
+            .voir-plus:hover {
+                color: #15ff00;
+                border-bottom: #15ff00 solid 2px;
+            }
