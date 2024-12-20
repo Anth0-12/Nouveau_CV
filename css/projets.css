@@ -73,8 +73,18 @@ header {
 .tableau {
     background-color: #252525 !important;
 }
-.ligne {
-    padding: 4rem 0 2rem 0 !important;
+.tableau h2 {
+    color: #15ff00 !important;
+    font-size: 3.5rem !important;
+    font-weight: bold !important;
+
+    padding: 4rem !important;  
+}
+.ligne-1 {
+    padding: 0rem 0 1.5rem 0 !important;
+}
+.ligne-2 {
+    padding: 1.5rem 0 4rem 0 !important;
 }
 .card{
     background-color: rgba(49, 49, 49, 0.8) !important;
@@ -87,14 +97,24 @@ header {
 }
 .card-title {
     color: #15ff00 !important;
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     font-weight: bold !important;
 
     padding: 1rem 0 1rem 0 !important;
 }
 .card-text {
+    height: 18vh !important;
     color: #fff !important;
+    font-size: 1.7rem !important;
+
+    padding: 0 1rem 2rem 1rem !important;
+}
+.decouvrir {
+    color: #15ff00 !important;
     font-size: 2rem !important;
 
-    padding: 0 1rem 1rem 1rem !important;
+    padding: 0.2rem 1rem 0.2rem 1rem !important;
+}
+.decouvrir:hover {
+    color: #ffffff !important;
 }
