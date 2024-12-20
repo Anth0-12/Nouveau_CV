@@ -23,6 +23,10 @@ function scrollFunction() {
 scrollFunction();
 
 
+
+// Écouter l'événement scroll pour appliquer l'animation
+window.addEventListener('scroll', handleScroll);
+
 // Fonction pour vérifier si l'élément est visible dans la fenêtre de visualisation
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -31,16 +35,13 @@ function isElementInViewport(el) {
 
 // Fonction de gestion du défilement
 function handleScroll() {
-    const element = document.querySelector('.projets');
+    const projets = document.querySelector('.projets');
     
     // Si l'élément est visible, ajouter la classe 'visible'
-    if (isElementInViewport(element)) {
-        element.classList.add('visible');
+    if (isElementInViewport(projets)) {
+        projets.classList.add('visible');
     }
 }
-
-// Écouter l'événement scroll pour appliquer l'animation
-window.addEventListener('scroll', handleScroll);
 
 // Appeler handleScroll immédiatement au cas où l'élément est déjà visible au chargement de la page
 handleScroll();
