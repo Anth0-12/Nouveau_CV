@@ -44,18 +44,15 @@ header {
             font-weight: bold;
 
             position: relative;
-            animation: slideInLeft 1s forwards;  /* Animation de 1 seconde */
+            right: 5%;
+            opacity: 0;
+            transition: 1s;
         }
-        @keyframes slideInLeft {
-            0% {
-                left: -5%;  /* Commence en dehors de l'écran à gauche */
-                opacity: 0;   /* Texte invisible */
-            }
-            100% {
-                left: 0;      /* Position finale (sur l'écran) */
-                opacity: 1;   /* Texte visible */
-            }
+        .slideGauche {
+            right: 0;
+            opacity: 1;
         }
+    
         .prenom {
             color: #fff;
             font-size: 3rem;
@@ -74,17 +71,13 @@ header {
             cursor: pointer;
 
             position: relative;
-            animation: slideInRight 1s forwards;  /* Animation de 1 seconde */
+            left: 5%;
+            opacity: 0;
+            transition: 1s;
         }
-        @keyframes slideInRight {
-            0% {
-                left: 5%;  /* Commence en dehors de l'écran à gauche */
-                opacity: 0;   /* Texte invisible */
-            }
-            100% {
-                left: 0;      /* Position finale (sur l'écran) */
-                opacity: 1;   /* Texte visible */
-            }
+        .slideDroite {
+            left: 0;
+            opacity: 1;
         }
             .menu li a{
                 color: #fff;
@@ -317,10 +310,7 @@ main {
     transform: translateY(70px); /* Déplacement initial vers le bas */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Animation de fondu et glissement */
 }
-.visible {
-    opacity: 1; /* L'élément devient visible */
-    transform: translateY(0); /* L'élément se déplace vers sa position initiale */
-}
+
     .projet-content {
         display: flex;
         justify-content: center;
