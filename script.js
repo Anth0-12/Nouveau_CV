@@ -1,28 +1,28 @@
 // Je séléctionne et je stock
 const projets = document.querySelector('.projets');
 const competences = document.querySelector('.competences');
+const menu = document.querySelector('.menu');
+const nom = document.querySelector('.nom');
 
-window.onload = function() {
-    competences.style.opacity = "1";
-}
+// Lorsque la page est chargee on ajoute la classe slideDroite au menu, slideGauche au nom et on fait apparaitre competences
+window.onload = competences.style.opacity = "1"; 
+                menu.classList.add('slideDroite'); 
+                nom.classList.add('slideGauche');
+
 // Au scroll de la page
-// On ajoute une fonction onscroll à la fenêtre pour surveiller les événements de défilement 
+// On ajoute une fonction scroll à la fenêtre pour surveiller les événements de défilement 
 // de la page et on appelle la fonction "scrollFunction"
-window.addEventListener('scroll', scrollFunction);
+window.addEventListener('scroll', scrollFunction); 
 
-// Quand l'utilisateur scroll de 20px vers le bas le bouton s'affiche 
-// avec le "display: block" sinon il reste invisible avec le "display: none"
+// la fonction affiche la div projets si la hauteur de défilement de la fenêtre est supérieur à 400
 function scrollFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-    projets.style.opacity = "1";
-  } else {
-    projets.style.opacity = "0";
-  }
+    let hauteur = document.documentElement.scrollTop;
+    // console.log(hauteur, "nombre de pixels de défilement de la fenêtre");
+    if (hauteur > 400) {
+        // console.log("modal affiché");
+        projets.style.opacity = '1';
+    }
 };
-
-scrollFunction();
-
-
 
 // Écouter l'événement scroll pour appliquer l'animation
 window.addEventListener('scroll', handleScroll);
@@ -35,11 +35,9 @@ function isElementInViewport(el) {
 
 // Fonction de gestion du défilement
 function handleScroll() {
-    const projets = document.querySelector('.projets');
-    
-    // Si l'élément est visible, ajouter la classe 'visible'
+    // Si l'élément est visible, appliquer l'animation
     if (isElementInViewport(projets)) {
-        projets.classList.add('visible');
+      projets.style.transform = 'translateY(0)';;
     }
 }
 
