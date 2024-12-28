@@ -23,6 +23,7 @@ function scrollFunction() {
         projets.style.opacity = '1';
     }
 };
+scrollFunction();
 
 // Écouter l'événement scroll pour appliquer l'animation
 window.addEventListener('scroll', handleScroll);
@@ -37,9 +38,20 @@ function isElementInViewport(el) {
 function handleScroll() {
     // Si l'élément est visible, appliquer l'animation
     if (isElementInViewport(projets)) {
-      projets.style.transform = 'translateY(0)';;
+      projets.style.transform = 'translateY(0)';
     }
 }
 
 // Appeler handleScroll immédiatement au cas où l'élément est déjà visible au chargement de la page
 handleScroll();
+
+
+
+// au clic sur l'image, elle s'agrandit, se déplace et un filtre noir s'ajoute en arriere plan
+const image = document.querySelector('.image-profil');
+const arrierePlanImage = document.querySelector('.arriere-plan-image'); 
+
+image.addEventListener('click', function() {
+    image.classList.toggle('image-profil-active');
+    arrierePlanImage.classList.toggle('arriere-plan-image-active');
+});
